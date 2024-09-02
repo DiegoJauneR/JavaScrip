@@ -1,4 +1,4 @@
-const CITIES = [
+const Saints = [
   { code: "hoy", name: "Hoy" },
   { code: "manana", name: "Mañana" },
   { code: "ayer", name: "Ayer" },
@@ -7,16 +7,16 @@ const CITIES = [
 const Select = ({ value, setValue }) => {
   return (
     <>
-      <label htmlFor="cities">Selecciona una ciudad:</label>
+      <label htmlFor="Saints">Selecciona un dia:</label>
       <select
-        name="cities"
-        id="cities"
+        name="saints"
+        id="saints"
         onChange={(e) => setValue(e.target.value)}
         value={value}
       >
-        {CITIES.map((city, index) => (
-          <option key={index} value={city.code}>
-            {city.name}
+        {Saints.map((saint, index) => (
+          <option key={index} value={saint.code}>
+            {saint.name}
           </option>
         ))}
       </select>

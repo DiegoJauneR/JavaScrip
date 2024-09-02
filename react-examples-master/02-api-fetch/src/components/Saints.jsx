@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Weather = ({ code }) => {
+const Saints = ({ code }) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -8,7 +8,6 @@ const Weather = ({ code }) => {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-
     fetch(`https://api.boostr.cl/santorales/${code}.json`)
       .then((response) => response.json())
       .then((data) => setData(data.data))
@@ -28,11 +27,11 @@ const Weather = ({ code }) => {
     <>
       {data && (
         <div>
-          <h2>Clima en {data.city}</h2>
+          <h2>El Dia es de {data[0]}</h2>
         </div>
       )}
     </>
   );
 };
 
-export default Weather;
+export default Saints;
