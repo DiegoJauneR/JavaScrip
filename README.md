@@ -1,1 +1,2 @@
-Diego Jaune
+# ✈ Ejercicios JavaScrip ✈
+**Autor:** Diego Jaune
